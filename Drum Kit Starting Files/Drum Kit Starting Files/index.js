@@ -2,12 +2,14 @@ for(var i=0;i<document.querySelectorAll(".drum").length;i++){
     document.querySelectorAll("button")[i].addEventListener("click",function (){
             var buttonClicked=this.innerHTML;
             keyPress(buttonClicked );
+            animateBtn(buttonClicked);
     });
 
 }
 
 document.addEventListener("keydown",function(event){
     keyPress(event.key);
+    animateBtn(event.key);
 });
 
 function keyPress(key){
@@ -43,6 +45,12 @@ function keyPress(key){
     }
 }
 
+function animateBtn(button){
+ let click = document.querySelector("."+ button);
+ click.classList.add("pressed");
+
+ setTimeout(() => click.classList.remove("pressed") , 100);
+}
 
 // var audio=new Audio("./sounds/tom-1.mp3");
 // audio.play();
