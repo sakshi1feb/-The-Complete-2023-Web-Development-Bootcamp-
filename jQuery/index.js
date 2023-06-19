@@ -1,4 +1,4 @@
-
-$(document).ready(function(){
-    $("h1").css("color","red");
+// let alphabet=$(h1).text;
+$(document).keypress(function(event){
+       $("h1").text("\t"+ event.key);
 });
