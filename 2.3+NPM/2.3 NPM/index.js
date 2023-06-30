@@ -3,7 +3,7 @@
 // console.log(`My new Name is ${sillyName}.`)
 
 
-import   from 'superheroes'
+import superheroes  from 'superheroes'
 // const superheroes = require('superheroes');
 
 // /superheroes.all;
